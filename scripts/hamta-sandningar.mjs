@@ -1,5 +1,5 @@
 // Hämtar Tyngdlyftnings-TV:s sändningar från Solidsport och sparar dem i sandningar.json.
-// Körs av GitHub Actions (se .github/workflows/hamta-sandningar.yml). Kräver Node 20 eller senare.
+// Körs av GitHub Actions (se .github/workflows/hamta-sandningar.yml). Kräver Node 20 eller senare (arbetsflödet använder Node 24).
 import { readFile, writeFile } from "node:fs/promises";
 
 const CHANNEL = process.env.SOLIDSPORT_CHANNEL || "tyngdlyftningstv";
