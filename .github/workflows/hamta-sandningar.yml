@@ -1,0 +1,35 @@
+name: Hämta sändningar
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # varje timme, 17 minuter över (UTC)
+  workflow_dispatch:        # gör att du kan köra den manuellt under fliken Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: hamta-sandningar
+  cancel-in-progress: false
+
+jobs:
+  hamta:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Hämta från Solidsport
+        run: node scripts/hamta-sandningar.mjs
+      - name: Spara om något ändrats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add sandningar.json
+          if git diff --cached --quiet; then
+            echo "Inget att spara."
+          else
+            git commit -m "Uppdatera sändningar från Solidsport"
+            git push
+          fi
