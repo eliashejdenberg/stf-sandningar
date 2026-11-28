@@ -1,6 +1,6 @@
 {
   "channel": "tyngdlyftningstv",
-  "updated": "2026-11-26T15:14:29.141Z",
+  "updated": "2026-11-28T10:26:34.097Z",
   "streams": [
     {
       "title": "Tyngdlyftnings SM 2026 - Fredag",
@@ -78,9 +78,9 @@
       "title": "Lag-SM 2026",
       "slug": "lag-sm-2026",
       "url": "https://solidsport.com/tyngdlyftningstv/watch/lag-sm-2026",
-      "start": "2026-11-28T09:00:00.000Z",
+      "start": "2026-11-28T09:56:30.000Z",
       "end": "2026-11-28T17:00:00.000Z",
-      "thumbnail": "https://edg05-prd-de-ixn.solidtango.com/cache/thumbnail/carousel/3116dcd0-ba45-48e8-b680-9ff0b6f831dd.png?cb=d78cc9b6a4c06c555722e8f28d259a99",
+      "thumbnail": "https://edg04-prd-de-ixn.solidtango.com/cache/thumbnail/carousel/3116dcd0-ba45-48e8-b680-9ff0b6f831dd.png?cb=d78cc9b6a4c06c555722e8f28d259a99",
       "categories": [
         "LSM2026"
       ],
